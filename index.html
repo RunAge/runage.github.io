@@ -12,13 +12,13 @@
     <div id='root'>
         <div id="player-box">
         </div>
-        <widgetbot
-            server="322910875730313216"
-            channel="512559828145537027"
-            shard="https://cl3.widgetbot.io"
-            id="chat"
-        ></widgetbot>
-        <script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
+            new Crate({
+              server: '322910875730313216',
+              channel: '512559828145537027',
+              shard: 'https://cl3.widgetbot.io'
+            })
+          </script>
         <script src="index.js"> </script>
         <style>
             html, body, div {
@@ -30,18 +30,12 @@
             }
             #player-box {
                 float: left;
-                width: 80%;
+                width: 100%;
                 height: 100%;
             }
             #player{
                 width: 100%;
                 height: 100%;
-            }
-            #chat {
-                float: right;
-                width: 20%;
-                height: 100%;
-                border-radius:0 !important;
             }
         </style>
     </div>

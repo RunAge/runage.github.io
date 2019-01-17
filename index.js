@@ -65,7 +65,7 @@ function loader(player, channel) {
                 src="https://mixer.com/embed/player/${channel || "RunAge"}">
             </iframe>`
             break;
-        case 'yt':
+        case 'yt' || 'youtube':
             playerbox.innerHTML = `
             <iframe 
                 id="player"
