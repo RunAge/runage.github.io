@@ -13,10 +13,16 @@
         <div id="player-box">
         </div>
         <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
-            new Crate({
+            const chat = new Crate({
               server: '322910875730313216',
               channel: '512559828145537027',
               shard: 'https://cl3.widgetbot.io'
+            })
+            chat.on('message', ({ message, channel }) => {
+                chat.notify({
+                    content: message,
+                    timeout: 2000
+                })
             })
           </script>
         <script src="index.js"> </script>
