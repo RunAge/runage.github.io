@@ -36,7 +36,7 @@ function locationHandler(location) {
 function loader(player, channel) {
     switch(player) {
         case 'anime': // sometimes errored with autoplay.
-            const enc = 'U2FsdGVkX18q9xEG5C1cbrhXVozXAu8jI8p1VcadnCQMt/rz/SQBqgHdgsJ/QVapny2xxhLV9IV6lNlPyBpsZCkkrZg49qL1qqtX98vFDne7BVEWx/Jub9WzycgApE00eCECFJwDu2QEWlkxNutBh36qomNP0Z2ZNWSDyM0TMWrljP+eKwGaT+0dHDqeFJEIDpWYsRduAuELMW/jAnC1OP6zmLzR/suHyVJU5VuhsA=='
+            const enc = 'U2FsdGVkX1+bcisrR2tmSZGi8fS9m9/qi3hFokinjnK+V7EZS4EfpSS0Wt0QwlK0TXuRyL8XsOKibXXXQj+589P5uk04zOXvDtwP6W2os7BfllJYqhlAe0cQz5lCnjhBrLYRcWjujDsgEs7r3p+7793VxnnD+gI6wwlZ+A19H3RAFWeZ7vBXrMpMu783GRvrXsSO/EHGSIsOr0jkx3h2ofzTyjgtv/HhSw8BBr8CJ8oKhPq/F3a1wu8='
             const dec = CryptoJS.RC4.decrypt(enc, channel)
             playerbox.innerHTML = CryptoJS.enc.Utf8.stringify(dec);
             let vjsPlayer = videojs('#player');
