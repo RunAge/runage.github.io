@@ -4,9 +4,7 @@
  */
 const rootElement = document.getElementById('root');
 const playerbox = document.getElementById('player-box');
-if(rootElement) {
-    locationHandler(document.location.search)
-}
+locationHandler(document.location.search)
 
 /**
  * Handling search location 
