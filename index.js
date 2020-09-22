@@ -7,10 +7,6 @@ const playerbox = document.getElementById('player-box');
 if(rootElement) {
     locationHandler(document.location.search)
 }
-/**
- * Loading discord chat from widgetbot.io
- */
-const embed = document.getElementById('chat')
 
 /**
  * Handling search location 
@@ -39,13 +35,13 @@ function locationHandler(location) {
  */
 function loader(player, channel) {
     switch(player) {
-        // case 'kamidere': // sometimes errored with autoplay.
-        //     const enc = 
-        //     const dec = CryptoJS.RC4.decrypt(enc, channel)
-        //     playerbox.innerHTML = CryptoJS.enc.Utf8.stringify(dec);
-        //     let vjsPlayer = videojs('#player');
-        //     vjsPlayer.play();
-        //     break;
+        case 'anime': // sometimes errored with autoplay.
+            const enc = 'U2FsdGVkX18q9xEG5C1cbrhXVozXAu8jI8p1VcadnCQMt/rz/SQBqgHdgsJ/QVapny2xxhLV9IV6lNlPyBpsZCkkrZg49qL1qqtX98vFDne7BVEWx/Jub9WzycgApE00eCECFJwDu2QEWlkxNutBh36qomNP0Z2ZNWSDyM0TMWrljP+eKwGaT+0dHDqeFJEIDpWYsRduAuELMW/jAnC1OP6zmLzR/suHyVJU5VuhsA=='
+            const dec = CryptoJS.RC4.decrypt(enc, channel)
+            playerbox.innerHTML = CryptoJS.enc.Utf8.stringify(dec);
+            let vjsPlayer = videojs('#player');
+            vjsPlayer.play();
+            break;
         case 'twitch':
             playerbox.innerHTML = `
             <iframe id="player"
